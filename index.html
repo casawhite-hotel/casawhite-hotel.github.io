@@ -49,6 +49,7 @@ nav button{flex:1;background:none;border:0;padding:9px 0 8px;font-size:11px;colo
 nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 nav button.on{color:var(--navy);font-weight:600}
 @media(min-width:900px){main{max-width:980px}.hero img{height:420px}.hero h1{font-size:40px}.hero p{font-size:17px}.pad{padding:28px 24px}.facts{grid-template-columns:repeat(4,1fr)}.tiles{grid-template-columns:repeat(4,1fr)}.card img{max-height:380px}.pics img{height:240px}p,li{font-size:16px}}
+.plc{display:flex;gap:14px;align-items:center}.card img.lg,.lg{width:84px;height:64px;max-height:64px;object-fit:contain;flex:none;background:#f6f3ee;border-radius:10px;padding:6px}.nl{display:flex;align-items:center;justify-content:center;font-size:10px;color:#999}.plc small{color:#777}.plc h3{margin:0 0 2px}.plc p{margin:4px 0 0}nav button{font-size:10px}
 </style></head><body>
 <header><img src="logo.png" alt="Casa White Hotel"></header>
 <main>
@@ -63,6 +64,8 @@ nav button.on{color:var(--navy);font-weight:600}
    <div class="fact"><b>~900 m</b><span>To the sea</span></div>
    <div class="fact"><b>July 2025</b><span>Opened</span></div>
   </div>
+  <a class="cta" href="https://haciendawhite.com/" target="_blank" rel="noopener">Hacienda White website</a>
+  <button class="cta" data-go="nearby" style="width:100%;border:0;font-size:inherit">Contact us</button>
   <div class="tiles">
    <button class="tile" data-go="rooms">Rooms &amp; suites</button>
    <button class="tile" data-go="dining">Dining &amp; bars</button>
@@ -135,6 +138,24 @@ nav button.on{color:var(--navy);font-weight:600}
  <a class="cta" href="https://www.google.com/maps/search/?api=1&query=Hacienda+White+North+Coast+Egypt">Open in Maps</a>
 </div></section>
 
+<section class="view" id="nearby"><div class="pad">
+ <h2>Steps away from Casa White</h2>
+ <p>Restaurants, venues and a neighbouring hotel. Logos and photos belong to their owners.</p>
+ <div class="card"><div class="pics"><img src="n_kikis1.jpg" alt="Kiki's Beach"><img src="n_kikis2.jpg" alt="Kiki's Beach"></div><div class="b"><div class="plc"><img class="lg" src="kikis.png" alt="Kiki's Beach logo"><div><h3>Kiki's Beach</h3><small>Beach</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Kiki%27s+Beach+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><img src="n_scalini1.jpg" alt="Scalini Restaurant"><div class="b"><div class="plc"><img class="lg" src="scalini.svg" alt="Scalini Restaurant logo"><div><h3>Scalini Restaurant</h3><small>Restaurant</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Scalini+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><div class="b"><div class="plc"><div class="lg nl">logo n/a</div><div><h3>Lucida</h3><small>Restaurant</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Lucida+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><div class="pics"><img src="n_galambo1.jpg" alt="Galambo"><img src="n_galambo2.jpg" alt="Galambo"></div><div class="b"><div class="plc"><img class="lg" src="galambo.svg" alt="Galambo logo" style="background:#2b2b2b"><div><h3>Galambo</h3><small>Restaurant</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Galambo+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><img src="n_lemon1.jpg" alt="Lemon Tree"><div class="b"><div class="plc"><img class="lg" src="tlt.png" alt="Lemon Tree logo"><div><h3>Lemon Tree</h3><small>Restaurant</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=The+Lemon+Tree+%26+Co+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><div class="pics"><img src="n_cc1.jpg" alt="Casa Cook North Coast"><img src="n_cc2.jpg" alt="Casa Cook North Coast"></div><div class="b"><div class="plc"><img class="lg" src="casacook.png" alt="Casa Cook North Coast logo"><div><h3>Casa Cook North Coast</h3><small>Neighbouring hotel</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Cook+North+Coast+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <div class="card"><img src="n_plage1.jpg" alt="La Plage by La Maison Ani Egypt"><div class="b"><div class="plc"><img class="lg" src="plage.png" alt="La Plage by La Maison Ani Egypt logo" style="background:#2b2b2b"><div><h3>La Plage by La Maison Ani Egypt</h3><small>Beach club</small></div></div><a class="cta" href="https://www.google.com/maps/search/?api=1&amp;query=La+Plage+by+La+Maison+Ani+Hacienda+White+North+Coast+Egypt" target="_blank" rel="noopener">Location on map</a></div></div>
+ <h2 id="contact">Contact us</h2>
+ <div class="card"><div class="b">
+  <div class="room"><div><b>Casa Cook North Coast (neighbouring hotel)</b><small>Official Casa Cook phone</small></div><em><a href="tel:+201003634003">+20 100 363 4003</a></em></div>
+  <div class="room"><div><b>Casa Cook customer service</b><small>Brand email (casacook.com)</small></div><em><a href="mailto:info@casacook.com">info@casacook.com</a></em></div>
+  <p><small>Casa White has no number or email of its own on official pages yet. These are the Casa Cook contacts.</small></p>
+ </div></div>
+</div></section>
+
 </main>
 <nav>
  <button class="on" data-go="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</button>
@@ -143,6 +164,7 @@ nav button.on{color:var(--navy);font-weight:600}
  <button data-go="leisure"><svg viewBox="0 0 24 24"><path d="M2 17c3 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 21c3 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M8 12V4M14 12V4M8 7h6"/></svg>Leisure</button>
  <button data-go="around"><svg viewBox="0 0 24 24"><path d="M4 16V7h13l3 4v5M4 16h16M8 19a1.5 1.5 0 1 0 0-.1M16 19a1.5 1.5 0 1 0 0-.1"/></svg>Around</button>
  <button data-go="where"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11zM12 12a2 2 0 1 0 0-.1"/></svg>Location</button>
+ <button data-go="nearby"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><path d="M9 10h6M12 7v6"/></svg>Nearby</button>
 </nav>
 <script>
 function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));
