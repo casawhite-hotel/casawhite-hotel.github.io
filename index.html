@@ -176,6 +176,6 @@ function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle
 document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===id));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(b.dataset.go)});
 if(location.hash&&document.getElementById(location.hash.slice(1)))go(location.hash.slice(1));
-if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).catch(()=>{});
 </script>
 </body></html>
