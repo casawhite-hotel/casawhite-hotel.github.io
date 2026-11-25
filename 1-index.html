@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2a2a6e">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Casa White Hotel</title>
+<style>
+:root{--navy:#2a2a6e;--sand:#f4efe7;--stone:#e3dccf;--ink:#23232f;--mut:#6b6a73}
+*{box-sizing:border-box;margin:0}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--sand);color:var(--ink);padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+h1,h2,h3,.sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+p,li,td,th,.sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+header{background:#fff;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;display:flex;justify-content:center;border-bottom:1px solid var(--stone);position:sticky;top:0;z-index:5}
+header img{height:46px}
+main{max-width:720px;margin:0 auto}
+.view{display:none;animation:none}.view.on{display:block}
+@keyframes f{from{opacity:0}to{opacity:1}}
+.hero{position:relative}
+.hero img{width:100%;height:240px;object-fit:cover;display:block}
+.hero div{position:absolute;inset:auto 0 0 0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(20,20,50,.75));color:#fff}
+.hero h1{font-size:26px;font-weight:600}.hero p{font-size:14px;opacity:.9;margin-top:4px}
+.pad{padding:18px 16px}
+h2{font-size:20px;color:var(--navy);margin:4px 0 12px;font-weight:600}
+h3{font-size:16px;color:var(--navy);margin-bottom:4px}
+p{line-height:1.55;font-size:15px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.fact{background:#fff;border-radius:14px;padding:14px;text-align:center}
+.fact b{display:block;font-size:24px;color:var(--navy);font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.fact span{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.card{background:#fff;border-radius:16px;overflow:hidden;margin-bottom:14px}
+.card img{width:100%;display:block;max-height:220px;object-fit:cover}
+.card .b{padding:14px 16px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.tile{background:var(--navy);color:#fff;border:0;border-radius:14px;padding:16px;font-size:15px;text-align:left;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.room{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--stone)}
+.room:last-child{border:0}.room b{color:var(--navy);font-size:15px}.room small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+.room em{font-style:normal;color:var(--navy);font-weight:600;white-space:nowrap;font-size:14px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.pics.pt img{height:260px}.pics img:last-child:nth-child(odd){grid-column:1/-1;height:170px}
+.pics img{width:100%;height:120px;object-fit:cover;border-radius:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#fff;border:1px solid var(--stone);border-radius:999px;padding:7px 13px;font-size:14px;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+ul{padding-left:20px}li{margin:6px 0;font-size:15px}
+.cta{display:block;background:var(--navy);color:#fff;text-decoration:none;text-align:center;padding:14px;border-radius:12px;margin-top:12px;font-weight:600;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+.note{background:var(--stone);border-radius:12px;padding:12px 14px;font-size:14px;margin-top:14px}
+nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--stone);display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:9}
+nav button{flex:1;background:none;border:0;padding:9px 0 8px;font-size:11px;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:3px;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+nav button.on{color:var(--navy);font-weight:600}
+@media(min-width:900px){main{max-width:980px}.hero img{height:420px}.hero h1{font-size:40px}.hero p{font-size:17px}.pad{padding:28px 24px}.facts{grid-template-columns:repeat(4,1fr)}.tiles{grid-template-columns:repeat(4,1fr)}.card img{max-height:380px}.pics img{height:240px}p,li{font-size:16px}}
+</style></head><body>
+<header><img src="logo.png" alt="Casa White Hotel"></header>
+<main>
+
+<section class="view on" id="home">
+ <div class="hero"><img src="hero.jpg" alt="Casa White entrance"><div><h1>Welcome to Casa White</h1><p>Hacienda White, Alamein · North Coast, Egypt</p></div></div>
+ <div class="pad">
+  <p>A 170-room hotel inside Hacienda White on Egypt's North Coast, about 900 metres from the sea. Natural timber, textured plaster and stone tones shape the rooms. Two restaurants, a private beach, and golf cars and a shuttle bus running around the clock.</p>
+  <div class="facts">
+   <div class="fact"><b>170</b><span>Rooms &amp; suites</span></div>
+   <div class="fact"><b>24/7</b><span>Reception</span></div>
+   <div class="fact"><b>~900 m</b><span>To the sea</span></div>
+   <div class="fact"><b>July 2025</b><span>Opened</span></div>
+  </div>
+  <div class="tiles">
+   <button class="tile" data-go="rooms">Rooms &amp; suites</button>
+   <button class="tile" data-go="dining">Dining &amp; bars</button>
+   <button class="tile" data-go="leisure">Pools, gym &amp; beach</button>
+   <button class="tile" data-go="around">Getting around</button>
+  </div>
+ </div>
+</section>
+
+<section class="view" id="rooms"><div class="pad">
+ <h2>Rooms &amp; suites</h2>
+ <div class="card"><img src="room.jpg" alt="Guest room"><div class="b">
+  <div class="room"><div><b>Standard Double</b><small>Connecting &amp; accessible (handicap) rooms available</small></div><em>~28 m²</em></div>
+  <div class="room"><div><b>Standard Pool View</b><small>Same size as Classic, overlooking the pool</small></div><em>~28 m²</em></div>
+  <div class="room"><div><b>Ground Floor Room</b><small>Ground-floor location</small></div><em>28 m²</em></div>
+  <div class="room"><div><b>One-Bedroom Suite</b><small>Bedroom plus living room</small></div><em>~55 m²</em></div>
+  <div class="room"><div><b>One-Bedroom Suite · Pool View</b><small>Bedroom plus living room, overlooking the pool</small></div><em>~55 m²</em></div>
+  <div class="room"><div><b>Two-Bedroom Suite</b><small>Two bedrooms plus living room</small></div><em>80 m²</em></div>
+  <div class="room"><div><b>Two-Bedroom Suite · Pool View</b><small>Two bedrooms plus living room, overlooking the pool</small></div><em>80 m²</em></div>
+ </div></div>
+ <div class="pics"><img src="room2.jpg" alt="Room"><img src="room3.jpg" alt="Room"></div>
+ <h3 style="margin:18px 0 8px">Suite interiors</h3>
+ <div class="pics"><img src="suite_living.jpg" alt="Living room"><img src="suite_bedroom.jpg" alt="Bedroom"><img src="suite_balcony.jpg" alt="Balcony with pool view"></div>
+ <h3 style="margin:18px 0 8px">Inside the suite</h3>
+ <div class="pics pt"><img loading="lazy" src="st_living.jpg" alt="Suite living room"><img loading="lazy" src="st_bed.jpg" alt="Suite bedroom"><img loading="lazy" src="st_living2.jpg" alt="Suite living area"><img loading="lazy" src="st_balcony.jpg" alt="Suite balcony view"><img loading="lazy" src="st_amen.jpg" alt="Bathroom amenities"><img loading="lazy" src="st_shower.jpg" alt="Rain shower"></div>
+ <h3 style="margin:6px 0 8px">In every room</h3>
+ <div class="chips"><span>Flat-screen TV</span><span>Minibar</span><span>Work desk</span><span>Walk-in rain shower</span><span>Bathrobes &amp; slippers</span></div>
+</div></section>
+
+<section class="view" id="dining"><div class="pad">
+ <h2>Dining &amp; bars</h2>
+ <div class="card"><img src="dining.jpg" alt="Dining"><div class="b">
+  <h3>Main Restaurant</h3><p>The hotel's main dining venue.</p><br>
+  <h3>Roof Top Restaurant</h3><p>Open-air rooftop dining with panoramic views. Timber pergola terrace with open sea views.</p></div></div>
+ <div class="pics"><img src="dining2.jpg" alt="Main Restaurant"><img src="roof1.jpg" alt="Roof Top Restaurant"><img src="roof2.jpg" alt="Roof Top Restaurant terrace"><img src="bar1.jpg" alt="Beach Bar"></div>
+ <h3 style="margin:18px 0 8px">Bars</h3>
+ <div class="card"><div class="b">
+  <div class="room"><div><b>Lobby Bar</b><small>In the lobby</small></div></div>
+  <div class="room"><div><b>Pool Bar</b><small>Beside the pool</small></div></div>
+  <div class="room"><div><b>Beach Bar</b><small>On the private beach</small></div></div></div></div>
+ <h3 style="margin:18px 0 8px">Steps away from Casa White</h3>
+ <div class="chips"><span>Kiki's Beach</span><span>Scalini Restaurant</span><span>Lucida</span><span>Galambo</span><span>Lemon Tree</span><span>Casa Cook North Coast</span><span>La plage by La Maison Ani Egypt</span></div>
+</div></section>
+
+<section class="view" id="leisure"><div class="pad">
+ <h2>Pools, gym &amp; beach</h2>
+ <div class="card"><img src="rooftop_pool.jpg" alt="Roof top pool"><div class="b"><h3>Three pools, one on the roof</h3><p>Swim at the Roof Top Swimming Pool or in the two other pools.</p></div></div>
+ <div class="card"><img src="beach.jpg" alt="Private beach"><div class="b"><h3>Private beach</h3><p>Sun, sand and sea, with a Beach Bar on the sand.</p></div></div>
+ <div class="pics"><img src="pool2.jpg" alt="Swimming pool"><img src="pool3.jpg" alt="Swimming pool"></div>
+ <h3 style="margin:18px 0 8px">Beach Bar</h3>
+ <div class="pics"><img src="beach2.jpg" alt="Beach"><img src="beach3.jpg" alt="Beach lounge"><img src="bar1.jpg" alt="Beach Bar pavilion"><img src="bar2.jpg" alt="Lounge beside the bar"></div>
+ <h3 style="margin:18px 0 8px">Gym, indoor and outdoor</h3>
+ <div class="pics"><img src="gym1.jpg" alt="Gym"><img src="gym2.jpg" alt="Gym treadmills"><img src="gym3.jpg" alt="Gym equipment"><img src="gym4.jpg" alt="Gym weights"></div>
+ <div class="card"><img src="pool.jpg" alt="Pool"><div class="b"><h3>Also at the hotel</h3><ul><li>Gym, indoor and outdoor</li><li>Terrace lounge</li><li>Shisha terrace</li><li>Handicap services and wheelchair access</li></ul></div></div>
+</div></section>
+
+<section class="view" id="around"><div class="pad">
+ <h2>Getting around</h2>
+ <div class="card"><img src="shuttle.jpg" alt="Shuttle bus"><div class="b"><h3>Golf cars &amp; shuttle bus, 24/7</h3><p>Golf cars and a shuttle bus run around the clock within Hacienda White, linking the hotel with the private beach, about 900 m from the sea.</p></div></div>
+ <div class="pics"><img src="golf1.jpg" alt="Golf car"><img src="golf2.jpg" alt="Multi-seat golf car"></div>
+ <div class="card"><img src="reception.jpg" alt="Reception"><div class="b"><h3>Reception, 24/7</h3><p>The front desk is open day and night.</p></div></div>
+</div></section>
+
+<section class="view" id="where"><div class="pad">
+ <h2>Location</h2>
+ <div class="card"><img src="location.jpg" alt="Location"><div class="b"><p>Casa White Hotel, Hacienda White, Alamein, North Coast, Egypt.</p></div></div>
+ <div class="card"><div class="b">
+  <div class="room"><div><b>Alamein International Airport</b><small>About 30 min by car via the International Coastal Road</small></div><em>≈ 29.5 km</em></div>
+  <div class="room"><div><b>Borg El Arab International Airport</b><small>About 1 h 30 min by car via the International Coastal Road</small></div><em>≈ 112–118 km</em></div></div></div>
+ <a class="cta" href="https://www.google.com/maps/search/?api=1&query=Hacienda+White+North+Coast+Egypt">Open in Maps</a>
+</div></section>
+
+</main>
+<nav>
+ <button class="on" data-go="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</button>
+ <button data-go="rooms"><svg viewBox="0 0 24 24"><path d="M3 18V8M3 14h18v4M21 14v-3a3 3 0 0 0-3-3h-7v6"/></svg>Rooms</button>
+ <button data-go="dining"><svg viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11M17 3c-2 2-3 5-3 8h3v10"/></svg>Dining</button>
+ <button data-go="leisure"><svg viewBox="0 0 24 24"><path d="M2 17c3 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 21c3 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M8 12V4M14 12V4M8 7h6"/></svg>Leisure</button>
+ <button data-go="around"><svg viewBox="0 0 24 24"><path d="M4 16V7h13l3 4v5M4 16h16M8 19a1.5 1.5 0 1 0 0-.1M16 19a1.5 1.5 0 1 0 0-.1"/></svg>Around</button>
+ <button data-go="where"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11zM12 12a2 2 0 1 0 0-.1"/></svg>Location</button>
+</nav>
+<script>
+function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));
+document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===id));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(b.dataset.go)});
+if(location.hash&&document.getElementById(location.hash.slice(1)))go(location.hash.slice(1));
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body></html>

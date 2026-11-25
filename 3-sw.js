@@ -1,0 +1,5 @@
+const C='casawhite-v6';
+const A=['./','index.html','manifest.json','bar1.jpg','bar2.jpg','beach.jpg','beach2.jpg','beach3.jpg','dining.jpg','dining2.jpg','golf1.jpg','golf2.jpg','gym1.jpg','gym2.jpg','gym3.jpg','gym4.jpg','hero.jpg','icon-192.png','icon-512.png','location.jpg','logo.png','lounge.jpg','pool.jpg','pool2.jpg','pool3.jpg','reception.jpg','roof1.jpg','roof2.jpg','rooftop_pool.jpg','room.jpg','room2.jpg','room3.jpg','shuttle.jpg','st_amen.jpg','st_balcony.jpg','st_bed.jpg','st_living.jpg','st_living2.jpg','st_shower.jpg','suite_balcony.jpg','suite_bedroom.jpg','suite_living.jpg'];
+self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(A)));self.skipWaiting()});
+self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
+self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))});
