@@ -37,7 +37,7 @@ p{line-height:1.55;font-size:15px}
 .room{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--stone)}
 .room:last-child{border:0}.room b{color:var(--navy);font-size:15px}.room small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
 .room em{font-style:normal;color:var(--navy);font-weight:600;white-space:nowrap;font-size:14px}
-.pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.pics.pt img{height:260px}.pics img:last-child:nth-child(odd){grid-column:1/-1;height:170px}.pics.sg img{height:150px}.pics.sg img:last-child:nth-child(odd){height:210px}
+.pics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.pics.pt img{height:260px}.pics img:last-child:nth-child(odd){grid-column:1/-1;height:170px}.pics.sg img{height:150px}.pics.sg img:last-child:nth-child(odd){height:210px}.pics img.dh{height:220px}.pics img.mh{height:150px}
 .pics img{width:100%;height:120px;object-fit:cover;border-radius:12px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips span{background:#fff;border:1px solid var(--stone);border-radius:999px;padding:7px 13px;font-size:14px;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -48,7 +48,7 @@ nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid 
 nav button{flex:1;background:none;border:0;padding:9px 0 8px;font-size:11px;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:3px;font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
 nav button svg{width:27px;height:27px;fill:currentColor;stroke:none}
 nav button.on{color:var(--navy);font-weight:600}
-@media(min-width:900px){main{max-width:980px}.hero img{height:420px}.hero h1{font-size:40px}.hero p{font-size:17px}.pad{padding:28px 24px}.facts{grid-template-columns:repeat(4,1fr)}.tiles{grid-template-columns:repeat(4,1fr)}.card img{max-height:380px}.pics img{height:240px}p,li{font-size:16px}}
+@media(min-width:900px){main{max-width:1020px}.hero img{height:440px}.hero h1{font-size:40px}.hero p{font-size:17px}.pad{padding:28px 26px}h2{font-size:24px}.facts{grid-template-columns:repeat(4,1fr)}.fact b{font-size:28px}.tiles{grid-template-columns:repeat(4,1fr)}.tile{font-size:16px;padding:20px 18px}.card img{aspect-ratio:16/8;max-height:440px}.pics img{height:260px}.pics img.dh{height:340px;max-width:560px;justify-self:center;grid-column:1/-1}.tile.half{grid-column:span 2}.pics img.mh{height:240px}.pics.pt{grid-template-columns:repeat(3,1fr)}.pics.pt img{height:360px}.pics.sg{grid-template-columns:repeat(3,1fr)}.pics.sg img,.pics.sg img:last-child:nth-child(odd){grid-column:auto;height:280px}p,li{font-size:16px}nav{left:50%;right:auto;transform:translateX(-50%);width:660px;max-width:100%;border:1px solid var(--stone);border-bottom:0;border-radius:18px 18px 0 0;box-shadow:0 -6px 24px rgba(20,20,50,.10)}}
 .plc{display:flex;gap:14px;align-items:center}.card img.lg,.lg{width:84px;height:64px;max-height:64px;object-fit:contain;flex:none;background:#f6f3ee;border-radius:10px;padding:6px}.nl{display:flex;align-items:center;justify-content:center;font-size:10px;color:#999}.plc small{color:#777}.plc h3{margin:0 0 2px}.plc p{margin:4px 0 0}nav button{font-size:10px}nav::-webkit-scrollbar{display:none}nav{scrollbar-width:none;overflow-x:auto;-webkit-overflow-scrolling:touch}nav button{flex:1 1 0;min-width:0;padding-left:0;padding-right:0;font-size:10px;white-space:nowrap}nav button svg{width:27px;height:27px}
 .pics img:last-child:nth-child(odd){grid-column:1/-1}
 </style></head><body>
@@ -66,8 +66,8 @@ nav button.on{color:var(--navy);font-weight:600}
    <div class="fact"><b>July 2025</b><span>Opened</span></div>
   </div>
   <div class="tiles">
-   <button class="tile" data-go="rooms">Rooms &amp; suites</button>
-   <button class="tile" data-go="dining">Dining &amp; bars</button>
+   <button class="tile half" data-go="rooms">Rooms &amp; suites</button>
+   <button class="tile half" data-go="dining">Dining &amp; bars</button>
    <button class="tile" data-go="leisure" style="grid-column:1/-1">Leisure &amp; activities</button>
    <button class="tile" data-go="where" style="grid-column:1/-1">Location &amp; Around</button>
   </div>
@@ -99,7 +99,7 @@ nav button.on{color:var(--navy);font-weight:600}
  <h2>Dining &amp; bars</h2>
  <div class="card"><img src="dining.jpg" alt="Main Restaurant"><div class="b">
    <h3>Main Restaurant</h3><p>The hotel's main dining venue.</p></div>
-   <div class="pics" style="margin:0 12px 12px"><img src="dining2.jpg" alt="Main Restaurant" style="height:220px"></div></div>
+   <div class="pics" style="margin:0 12px 12px"><img class="dh" src="dining2.jpg" alt="Main Restaurant"></div></div>
   <div class="card"><div class="b">
    <h3>Roof Top Restaurant</h3><p>Open-air rooftop dining with panoramic views. Timber pergola terrace with open sea views.</p></div>
    <div class="pics" style="margin:0 12px 12px"><img src="roof1.jpg" alt="Roof Top Restaurant"><img src="roof2.jpg" alt="Roof Top Restaurant terrace"></div></div>
@@ -107,7 +107,7 @@ nav button.on{color:var(--navy);font-weight:600}
   <div class="card"><div class="b">
    <div class="room"><div><b>Lobby Bar</b><small>In the lobby</small></div></div>
    <div class="room"><div><b>Pool Bar</b><small>Beside the pool</small></div></div>
-   <div class="pics" style="margin:12px 0 0"><img src="poolbar1.jpg" alt="Pool Bar" style="height:150px"><img src="poolbar2.jpg" alt="Pool Bar pergola" style="height:150px"></div>
+   <div class="pics" style="margin:12px 0 0"><img class="mh" src="poolbar1.jpg" alt="Pool Bar"><img class="mh" src="poolbar2.jpg" alt="Pool Bar pergola"></div>
    <div class="room"><div><b>Beach Bar</b><small>On the private beach</small></div></div></div>
   <img src="bar1.jpg" alt="Beach Bar on the private beach"></div>
  </div></section>
