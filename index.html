@@ -187,6 +187,6 @@ function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle
 document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===id));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){go(b.dataset.go);const n=document.querySelector('nav button[data-go="'+b.dataset.go+'"]');if(n&&n.scrollIntoView)n.scrollIntoView({inline:'center',block:'nearest'})}});
 if(location.hash&&document.getElementById(location.hash.slice(1)))go(location.hash.slice(1));
-if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).catch(()=>{});
+if('serviceWorker' in navigator){var _reloaded=false;navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(r=>{if(r&&r.update)r.update();if(r&&r.waiting)r.waiting.postMessage('skip')}).catch(()=>{});navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!_reloaded){_reloaded=true;location.reload()}});}
 </script>
 </body></html>
